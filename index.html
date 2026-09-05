@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAFÉ MORI｜森の中の一杯</title>
+  <meta name="description" content="CAFÉ MORI（カフェ モリ）は、静かな森のような時間を届けるスペシャルティコーヒーショップです。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#hero" class="brand" data-scroll>
+        <span class="brand-mark">☕</span>
+        <span class="brand-name">CAFÉ&nbsp;MORI</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="#about" data-scroll>About</a></li>
+          <li><a href="#menu" data-scroll>Menu</a></li>
+          <li><a href="#access" data-scroll>Access</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <p class="hero-eyebrow reveal">SPECIALTY COFFEE &amp; SLOW TIME</p>
+        <h1 class="hero-title reveal">
+          森の奥で、<br />
+          深呼吸するような一杯を。
+        </h1>
+        <p class="hero-lead reveal">
+          CAFÉ MORI は、木漏れ日と豆の香りに包まれる小さな喫茶室。<br />
+          忙しい一日の途中に、静かな余白をどうぞ。
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#menu" class="btn btn-primary" data-scroll>メニューを見る</a>
+          <a href="#access" class="btn btn-ghost" data-scroll>お店へのアクセス</a>
+        </div>
+      </div>
+      <a href="#about" class="hero-scroll" data-scroll aria-label="次のセクションへ">
+        <span class="hero-scroll-line"></span>
+        Scroll
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <div class="about-photo about-photo--main"></div>
+          <div class="about-photo about-photo--sub"></div>
+          <span class="about-badge">Since 2014</span>
+        </div>
+        <div class="about-body reveal">
+          <p class="section-eyebrow">About us</p>
+          <h2 class="section-title">「何もしない時間」を<br />ていねいに淹れる。</h2>
+          <p class="section-text">
+            郊外の雑木林のそばに、ぽつんと佇むロースタリーカフェ。
+            自家焙煎したシングルオリジンの豆を、一杯ずつハンドドリップでお出ししています。
+          </p>
+          <p class="section-text">
+            店内に流れるのは、葉ずれの音のような小さな音楽だけ。
+            スマートフォンを置いて、湯気の向こうをぼんやり眺める——
+            そんな時間のために、この場所をつくりました。
+          </p>
+          <ul class="about-points">
+            <li><strong>自家焙煎</strong>／週2回、少量ずつ焙煎</li>
+            <li><strong>フェアトレード</strong>／生産者と直接取引</li>
+            <li><strong>森の器</strong>／地元作家の陶器で提供</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Our menu</p>
+          <h2 class="section-title">森からのメニュー</h2>
+          <p class="section-text section-text--center">
+            季節ごとに少しずつ表情を変える、定番の顔ぶれです。
+          </p>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card reveal">
+            <div class="menu-card-icon">☕</div>
+            <h3 class="menu-card-title">モリ ブレンド</h3>
+            <p class="menu-card-desc">
+              ビターチョコとくるみを思わせる、深煎りの看板ブレンド。ミルクとも好相性。
+            </p>
+            <p class="menu-card-price">¥560</p>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card-icon">🫖</div>
+            <h3 class="menu-card-title">木漏れ日ハンドドリップ</h3>
+            <p class="menu-card-desc">
+              その日おすすめのシングルオリジンを、目の前で一杯ずつ。フルーティーな酸が主役。
+            </p>
+            <p class="menu-card-price">¥680</p>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card-icon">🥛</div>
+            <h3 class="menu-card-title">フォレスト カフェラテ</h3>
+            <p class="menu-card-desc">
+              低温殺菌ミルクのやさしい甘みと、エスプレッソのコク。ホット／アイス。
+            </p>
+            <p class="menu-card-price">¥620</p>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card-icon">🍃</div>
+            <h3 class="menu-card-title">ハーブ煎茶ソーダ</h3>
+            <p class="menu-card-desc">
+              自家製ミントシロップと和紅茶のノンカフェイン寄りソーダ。夏の定番。
+            </p>
+            <p class="menu-card-price">¥580</p>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card-icon">🍰</div>
+            <h3 class="menu-card-title">ガトー・ド・モリ</h3>
+            <p class="menu-card-desc">
+              くるみとキャラメルの濃厚ケーキ。コーヒーと合わせるための一皿。
+            </p>
+            <p class="menu-card-price">¥520</p>
+          </article>
+
+          <article class="menu-card reveal">
+            <div class="menu-card-icon">🥐</div>
+            <h3 class="menu-card-title">森のモーニング</h3>
+            <p class="menu-card-desc">
+              自家製フォカッチャ、スープ、本日のコーヒー。11:00 まで。
+            </p>
+            <p class="menu-card-price">¥900</p>
+          </article>
+        </div>
+
+        <p class="menu-note reveal">※価格は税込です。豆の販売（100g ¥800〜）も承っています。</p>
+      </div>
+    </section>
+
+    <!-- ACCESS -->
+    <section class="section access" id="access">
+      <div class="container access-grid">
+        <div class="access-info reveal">
+          <p class="section-eyebrow">Access</p>
+          <h2 class="section-title">お店について</h2>
+
+          <dl class="access-list">
+            <div>
+              <dt>住所</dt>
+              <dd>〒000-0000<br />架空県 森見市 木洩里 1-2-3　MORI ビル 1F</dd>
+            </div>
+            <div>
+              <dt>電話</dt>
+              <dd><a href="tel:0000000000">00-0000-0000</a></dd>
+            </div>
+            <div>
+              <dt>営業時間</dt>
+              <dd>平日 8:00 – 19:00<br />土日祝 9:00 – 18:00</dd>
+            </div>
+            <div>
+              <dt>定休日</dt>
+              <dd>毎週水曜、第3火曜</dd>
+            </div>
+            <div>
+              <dt>アクセス</dt>
+              <dd>森見鉄道「木洩里駅」南口より徒歩5分<br />専用駐車場 3台あり</dd>
+            </div>
+          </dl>
+
+          <a href="#hero" class="btn btn-primary" data-scroll>ページ上部へ戻る</a>
+        </div>
+
+        <div class="access-map reveal" aria-label="店舗周辺のイメージマップ">
+          <div class="map-canvas">
+            <span class="map-road map-road--h"></span>
+            <span class="map-road map-road--v"></span>
+            <span class="map-tree" style="top:12%;left:18%">🌲</span>
+            <span class="map-tree" style="top:70%;left:8%">🌳</span>
+            <span class="map-tree" style="top:30%;left:80%">🌲</span>
+            <span class="map-tree" style="top:82%;left:72%">🌳</span>
+            <span class="map-pin">📍<em>CAFÉ MORI</em></span>
+            <span class="map-station" style="top:64%;left:60%">🚉 木洩里駅</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="brand brand--footer" data-scroll>
+        <span class="brand-mark">☕</span>
+        <span class="brand-name">CAFÉ&nbsp;MORI</span>
+      </a>
+      <p class="footer-copy">© 2014–2026 CAFÉ MORI. This is a fictional shop.</p>
+      <ul class="footer-social">
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="X">X</a></li>
+        <li><a href="#" aria-label="Note">note</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="ページ上部へ戻る">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
