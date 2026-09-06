@@ -166,6 +166,70 @@
     revealEls.forEach((el) => revealObserver.observe(el));
   }
 
+  /* ---------- お問い合わせフォームのバリデーション ---------- */
+  const contactForm = document.getElementById("contactForm");
+
+  if (contactForm) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const fields = [
+      {
+        input: document.getElementById("cf-name"),
+        error: document.getElementById("cf-name-error"),
+        validate: (value) => (value ? "" : "お名前を入力してください。"),
+      },
+      {
+        input: document.getElementById("cf-email"),
+        error: document.getElementById("cf-email-error"),
+        validate: (value) => {
+          if (!value) return "メールアドレスを入力してください。";
+          if (!emailPattern.test(value))
+            return "メールアドレスの形式が正しくありません。";
+          return "";
+        },
+      },
+      {
+        input: document.getElementById("cf-message"),
+        error: document.getElementById("cf-message-error"),
+        validate: (value) => (value ? "" : "お問い合わせ内容を入力してください。"),
+      },
+    ];
+
+    function validateField(field) {
+      const message = field.validate(field.input.value.trim());
+      field.error.textContent = message;
+      field.input.closest(".form-row").classList.toggle("is-invalid", Boolean(message));
+      return !message;
+    }
+
+    fields.forEach((field) => {
+      field.input.addEventListener("blur", () => validateField(field));
+      field.input.addEventListener("input", () => {
+        if (field.input.closest(".form-row").classList.contains("is-invalid")) {
+          validateField(field);
+        }
+      });
+    });
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      let firstInvalid = null;
+      fields.forEach((field) => {
+        const ok = validateField(field);
+        if (!ok && !firstInvalid) firstInvalid = field.input;
+      });
+
+      if (firstInvalid) {
+        firstInvalid.focus();
+        return;
+      }
+
+      alert("送信しました");
+      contactForm.reset();
+    });
+  }
+
   /* ---------- 現在時刻から営業中かどうかを表示（軽い遊び） ---------- */
   const year = new Date().getFullYear();
   document.querySelectorAll(".footer-copy").forEach((el) => {

@@ -23,6 +23,7 @@
           <li><a href="#about" data-scroll>About</a></li>
           <li><a href="#menu" data-scroll>Menu</a></li>
           <li><a href="#access" data-scroll>Access</a></li>
+          <li><a href="#contact" data-scroll>お問い合わせ</a></li>
         </ul>
       </nav>
 
@@ -203,6 +204,41 @@
             <span class="map-station" style="top:64%;left:60%">🚉 木洩里駅</span>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Contact</p>
+          <h2 class="section-title">お問い合わせ</h2>
+          <p class="section-text section-text--center">
+            ご予約・豆の販売・出張焙煎のご相談など、お気軽にどうぞ。
+          </p>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="cf-name">お名前<span class="req">必須</span></label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" />
+            <p class="form-error" id="cf-name-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="cf-email">メールアドレス<span class="req">必須</span></label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" />
+            <p class="form-error" id="cf-email-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-row">
+            <label for="cf-message">お問い合わせ内容<span class="req">必須</span></label>
+            <textarea id="cf-message" name="message" rows="6"></textarea>
+            <p class="form-error" id="cf-message-error" aria-live="polite"></p>
+          </div>
+
+          <button type="submit" class="btn btn-primary contact-submit">送信する</button>
+        </form>
       </div>
     </section>
   </main>
